@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="0.55" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="hglow" cx="0.5" cy="0.42" r="0.65">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hglass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <pattern id="hdots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#ffffff" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="520" height="520" rx="36" fill="#0a0e1a"/>
+  <rect width="520" height="520" rx="36" fill="url(#hdots)"/>
+  <rect width="520" height="520" rx="36" fill="url(#hglow)"/>
+
+  <circle cx="260" cy="252" r="178" fill="none" stroke="url(#hg)" stroke-width="1.5" opacity="0.4" stroke-dasharray="5 12"/>
+
+  <circle cx="260" cy="200" r="74" fill="url(#hglass)" stroke="url(#hg)" stroke-width="3.5"/>
+  <path d="M126 408c0-66 60-112 134-112s134 46 134 112" fill="url(#hglass)" stroke="url(#hg)" stroke-width="3.5"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="bold" text-anchor="middle">
+    <text x="112" y="128" font-size="34" fill="#22d3ee" opacity="0.95">&lt;/&gt;</text>
+    <text x="416" y="176" font-size="26" fill="#a78bfa" opacity="0.95">{ }</text>
+    <text x="424" y="438" font-size="30" fill="#34d399" opacity="0.9">&lt;/&gt;</text>
+    <text x="96" y="452" font-size="26" fill="#818cf8" opacity="0.9">( )</text>
+  </g>
+
+  <g fill="#ffffff">
+    <circle cx="86" cy="330" r="3" opacity="0.55"/>
+    <circle cx="442" cy="300" r="3" opacity="0.5"/>
+    <circle cx="150" cy="64" r="2.5" opacity="0.5"/>
+    <circle cx="470" cy="86" r="2.5" opacity="0.45"/>
+    <circle cx="360" cy="52" r="2" opacity="0.4"/>
+  </g>
+
+  <rect x="8" y="8" width="504" height="504" rx="30" fill="none" stroke="url(#hg)" stroke-width="2" opacity="0.5"/>
+</svg>
