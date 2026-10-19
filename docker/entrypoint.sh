@@ -20,13 +20,14 @@ if [ "${DB_CONNECTION:-sqlite}" = "sqlite" ]; then
     chmod 664 "$DB_PATH"
 fi
 
-# Ensure storage and bootstrap/cache permissions
+# Ensure storage, bootstrap/cache, and supervisor log directories
 echo "==> Setting directory permissions..."
 mkdir -p /var/www/html/storage/framework/cache \
          /var/www/html/storage/framework/sessions \
          /var/www/html/storage/framework/views \
          /var/www/html/storage/logs \
-         /var/www/html/bootstrap/cache
+         /var/www/html/bootstrap/cache \
+         /var/log/supervisor
 
 chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
