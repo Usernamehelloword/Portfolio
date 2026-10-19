@@ -38,14 +38,6 @@ if [ ! -L /var/www/html/public/storage ]; then
     php artisan storage:link || true
 fi
 
-# Cache configuration, routes, and views in production
-if [ "${APP_ENV:-production}" = "production" ]; then
-    echo "==> Caching Laravel configuration and routes..."
-    php artisan config:cache || true
-    php artisan route:cache || true
-    php artisan view:cache || true
-fi
-
 # Run database migrations
 if [ "${RUN_MIGRATIONS:-true}" = "true" ]; then
     echo "==> Running database migrations..."
@@ -56,6 +48,24 @@ fi
 if [ "${RUN_SEEDER:-false}" = "true" ]; then
     echo "==> Running database seeders..."
     php artisan db:seed --force || true
+fi
+
+# Fix database permissions after migration/seeding
+if [ "${DB_CONNECTION:-sqlite}" = "sqlite" ]; then
+    chown -R www-data:www-data /var/www/html/database
+    chmod -R 775 /var/www/html/database
+    chmod 664 "${DB_PATH:-/var/www/html/database/database.sqlite}" 2>/dev/null || true
+fi
+
+# Clear and rebuild caches in production
+echo "==> Clearing old application caches..."
+php artisan cache:clear || true
+
+if [ "${APP_ENV:-production}" = "production" ]; then
+    echo "==> Caching Laravel configuration, routes, and views..."
+    php artisan config:cache || true
+    php artisan route:cache || true
+    php artisan view:cache || true
 fi
 
 echo "==> Application ready. Starting Supervisor..."

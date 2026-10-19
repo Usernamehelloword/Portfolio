@@ -170,24 +170,27 @@ return [
         ],
     ],
 
-    'experiences' => [
+    'experience' => [
         [
             'period' => '2026 — Present',
             'title' => 'Full-Stack Developer',
             'description' => 'Building modern web applications and backend systems.',
             'is_current' => true,
+            'current' => true,
         ],
         [
             'period' => '2025 — 2026',
             'title' => 'Web Development',
             'description' => 'Focused on JavaScript, Node.js, Laravel, databases, and API development.',
             'is_current' => false,
+            'current' => false,
         ],
         [
             'period' => '2024 — 2025',
             'title' => 'Started Programming',
             'description' => 'Learned HTML, CSS, JavaScript, databases, and software development fundamentals.',
             'is_current' => false,
+            'current' => false,
         ],
     ],
 
@@ -222,10 +225,12 @@ return [
         'phone_href' => '+85514549059',
         'location' => 'Phnom Penh, Cambodia',
         'github' => [
+            'label' => 'GitHub',
             'handle' => 'https://github.com/Usernamehelloword',
             'href' => 'https://github.com/Usernamehelloword',
         ],
         'linkedin' => [
+            'label' => 'LinkedIn',
             'handle' => 'linkedin.com/in/kimlay1',
             'href' => 'https://www.linkedin.com/in/kimlay1',
         ],
