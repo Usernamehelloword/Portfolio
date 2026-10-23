@@ -15,7 +15,7 @@ return [
 
     'logo' => 'KIMLAY.',
 
-    'role' => 'Full-Stack Developer & Creative Problem Solver',
+    'role' => 'Web Developer & Creative Problem Solver',
 
     'tagline' => 'I build modern, responsive, and high-performance web applications that combine clean design with powerful technology.',
 
@@ -120,7 +120,6 @@ return [
             'items' => [
                 ['name' => 'Git', 'abbr' => 'GT', 'level' => 50, 'color' => '#f05033'],
                 ['name' => 'GitHub', 'abbr' => 'GH', 'level' => 50, 'color' => '#e6edf3'],
-                ['name' => 'Docker', 'abbr' => 'DK', 'level' => 40, 'color' => '#2496ed'],
                 ['name' => 'VS Code', 'abbr' => 'VS', 'level' => 60, 'color' => '#3da7f5'],
                 ['name' => 'Postman', 'abbr' => 'PM', 'level' => 40, 'color' => '#ff6c37'],
             ],

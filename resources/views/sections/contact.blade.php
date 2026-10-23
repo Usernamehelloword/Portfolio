@@ -12,8 +12,8 @@
                 ['icon' => 'mail', 'label' => 'Email', 'value' => $contact['email'], 'href' => 'mailto:'.$contact['email']],
                 ['icon' => 'phone', 'label' => 'Phone', 'value' => $contact['phone'], 'href' => 'tel:'.$contact['phone_href']],
                 ['icon' => 'pin', 'label' => 'Location', 'value' => $contact['location'], 'href' => null],
-                ['icon' => 'github', 'label' => 'GitHub', 'value' => $contact['github']['handle'], 'href' => $contact['github']['href']],
-                ['icon' => 'linkedin', 'label' => 'LinkedIn', 'value' => $contact['linkedin']['handle'], 'href' => $contact['linkedin']['href']],
+                ['icon' => 'github', 'label' => 'GitHub', 'value' => preg_replace('#^https?://(www\.)?github\.com/#i', '@', $contact['github']['handle']), 'href' => $contact['github']['href']],
+                ['icon' => 'linkedin', 'label' => 'LinkedIn', 'value' => preg_replace('#^https?://(www\.)?linkedin\.com/in/#i', '', $contact['linkedin']['handle']), 'href' => $contact['linkedin']['href']],
             ])
 
             <ul class="contact__list">

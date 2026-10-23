@@ -22,7 +22,7 @@ class PortfolioReseed extends Command
      *
      * @var string
      */
-    protected $signature = 'portfolio:reseed';
+    protected $signature = 'portfolio:reseed {--force : Force the operation without confirmation}';
 
     /**
      * The console command description.
@@ -36,7 +36,7 @@ class PortfolioReseed extends Command
      */
     public function handle(): int
     {
-        if (! $this->confirm('This deletes ALL current content edits and restores the defaults from config/portfolio.php. Continue?')) {
+        if (! $this->option('force') && ! $this->confirm('This deletes ALL current content edits and restores the defaults from config/portfolio.php. Continue?')) {
             $this->info('Cancelled.');
 
             return self::SUCCESS;
